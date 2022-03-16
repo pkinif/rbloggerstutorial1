@@ -17,4 +17,5 @@ ADD . /app
 WORKDIR /app
 
 CMD service nginx start 
-CMD["ubuntu/rbloggerstutorial1/start_api.R"]
+
+ENTRYPOINT ["Rscript", "start_api.R"]
