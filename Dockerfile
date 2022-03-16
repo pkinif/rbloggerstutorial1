@@ -3,10 +3,10 @@ FROM rocker/r-base
 # setup nginx
 RUN apt-get update && \
 	apt-get install -y nginx apache2-utils && \
-	htpasswd -bc /etc/nginx/.htpasswd test test 
+	htpasswd -bc /etc/nginx/.htpasswd test test \
+	libsodium-dev 
 	
 # install R packages
-RUN apt install libsodium-dev # required for plumber
 RUN install2.r --error plumber
 
 
