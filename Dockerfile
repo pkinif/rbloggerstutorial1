@@ -9,9 +9,7 @@ RUN apt-get update -qq \
 # setup nginx
 RUN apt-get update && \
 	apt-get install -y nginx apache2-utils && \
-	htpasswd -bc /etc/nginx/.htpasswd test test \
-	libsodium-dev 
-	
+	htpasswd -bc /etc/nginx/.htpasswd test test 
 
 RUN openssl req -batch -x509 -nodes -days 365 -newkey rsa:2048 \
 		-keyout /etc/ssl/private/server.key \
