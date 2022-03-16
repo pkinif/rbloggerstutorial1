@@ -1,4 +1,4 @@
-FROM rocker/r-base
+FROM rstudio/plumber
 
 RUN apt-get update -qq \
     && apt-get -y --no-install-recommends install \
