@@ -16,4 +16,5 @@ EXPOSE 80 443
 ADD . /app
 WORKDIR /app
 
-CMD service nginx start && ["start_api.R"]
+CMD service nginx start 
+CMD["ubuntu/rbloggerstutorial1/start_api.R"]
