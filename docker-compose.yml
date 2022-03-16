@@ -63,13 +63,13 @@ volumes:
         driver: local
         driver_opts:
             type: none
-            device: /home/ubuntu/rbloggerstutorial1/www/
+            device: /home/ubuntu/www/
             o: bind
     dhparam:
         driver: local
         driver_opts: 
             type: none
-            device: /home/ubuntu/rbloggerstutorial1/dhparam/
+            device: /home/ubuntu/dhparam/
             o: bind
 
 # Set up cross-container network
