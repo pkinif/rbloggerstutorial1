@@ -1,0 +1,7 @@
+version: '3.3'
+services:
+    plumber_auth_ssl:
+        ports:
+            - '80:80'
+            - '443:443'
+        image: plumber_auth_ssl
