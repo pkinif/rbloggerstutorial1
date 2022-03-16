@@ -1,14 +1,15 @@
 FROM rocker/r-base
 
-# install R packages
-RUN apt install libsodium-dev # required for plumber
-RUN install2.r --error plumber
-
 # setup nginx
 RUN apt-get update && \
 	apt-get install -y nginx apache2-utils && \
 	htpasswd -bc /etc/nginx/.htpasswd test test 
-    
+	
+# install R packages
+RUN apt install libsodium-dev # required for plumber
+RUN install2.r --error plumber
+
+
 RUN openssl req -batch -x509 -nodes -days 365 -newkey rsa:2048 \
 		-keyout /etc/ssl/private/server.key \
 		-out /etc/ssl/private/server.crt
