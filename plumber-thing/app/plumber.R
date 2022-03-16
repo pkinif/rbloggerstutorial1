@@ -1,3 +1,5 @@
+library(plumber)
+
 # plumber.R
 
 #* Echo back the input
