@@ -1,11 +1,5 @@
 FROM rstudio/plumber
 
-RUN apt-get update -qq \
-    && apt-get -y --no-install-recommends install \
-    libsodium-dev \
-&& install2.r --error --deps TRUE \
-    plumber
-    
 # setup nginx
 RUN apt-get update && \
 	apt-get install -y nginx apache2-utils && \
