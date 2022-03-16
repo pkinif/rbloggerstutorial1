@@ -1,6 +1,7 @@
 FROM rocker/r-base
 
 # install R packages
+RUN apt install libsodium-dev # required for plumber
 RUN install2.r --error plumber
 
 # setup nginx
